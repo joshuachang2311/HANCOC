@@ -8,7 +8,7 @@ import xml.etree.cElementTree as ET
 from sklearn.cross_validation import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-def HANCOC(music_xml_string, name = 'new_music_with_chords'):
+def HANCOC(music_xml_string, name = 'score_by_HANCOC'):
     XTrain, XTest, yTrain, yTest = train_test_split(XOH, y, test_size = 0.3731343)
     RFC = RandomForestClassifier(n_estimators = 50, criterion = "gini",	max_features = 10)
     RFC.fit(XTrain, yTrain)
